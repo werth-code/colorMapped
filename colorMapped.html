@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+
+    <link rel="stylesheet" href="colorMapped.css">
+
+    <title>ColorMapped</title>
+
+</head>
+<body>
+
+<div id=top-color-mapped-div>
+
+    <h1>ColorMapped</h1>
+    <h2>Choose A Location To Search For Colors.</h2>
+    <p>Find Colors From Any Region Around The World.</p>
+    <input id='location-input'type="text">
+    <button id='submit-location'>Submit</button> 
+
+</div>
+
+<div id="mapid"></div>
+<div id='map' style='width: 400px; height: 300px;'></div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dGhld3dlcnRoIiwiYSI6ImNrNXNrMHRmODAycG0zbnA1aWxkeTV4dzEifQ.yIl-c7C8QQXSKBY1lI4u1A';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11'
+});
+</script>
+
+</body>
+
+<script src=colorMapped.js>""</script>
+
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+crossorigin=""></script>
+
+</html>
